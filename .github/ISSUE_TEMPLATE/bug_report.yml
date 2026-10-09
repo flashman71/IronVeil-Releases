@@ -1,0 +1,64 @@
+
+name: "Bug Report"
+description: "Report a problem with an Iron Veil playtest build"
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for testing Iron Veil! Please avoid posting private information."
+  - type: input
+    id: version
+    attributes:
+      label: "Game version"
+      placeholder: "v0.2.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: "Operating system"
+      options:
+        - Linux
+        - Windows
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: mission
+    attributes:
+      label: "Where did this happen?"
+      options:
+        - Main menu / New game
+        - Mission 1
+        - Mission 2
+        - Save / Continue
+        - Notebook / Handbook / Dossier
+        - Other / Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "What went wrong?"
+      description: "Include what you expected to happen."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce"
+      placeholder: |
+        1. Start the game
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: "Screenshots, error messages, or logs"
+      description: "Optional. Remove sensitive information."
+    validations:
+      required: false
+

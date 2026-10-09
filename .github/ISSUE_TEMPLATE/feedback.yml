@@ -1,0 +1,61 @@
+
+name: "Playtest Feedback"
+description: "Share impressions and suggestions for Iron Veil"
+title: "[FEEDBACK] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for playtesting Iron Veil! Please mark major story spoilers clearly."
+  - type: input
+    id: version
+    attributes:
+      label: "Game version"
+      placeholder: "v0.2.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: mission
+    attributes:
+      label: "Which part are you commenting on?"
+      options:
+        - Overall game
+        - Mission 1
+        - Mission 2
+        - Interface / Reference materials
+        - Save / Continue
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Feedback category"
+      options:
+        - Story / Pacing
+        - Cipher puzzles / Difficulty
+        - Instructions / Clarity
+        - User interface / Readability
+        - Challenge / Response
+        - General suggestion
+    validations:
+      required: true
+  - type: textarea
+    id: worked
+    attributes:
+      label: "What worked well?"
+    validations:
+      required: false
+  - type: textarea
+    id: improve
+    attributes:
+      label: "What should we improve?"
+    validations:
+      required: true
+  - type: textarea
+    id: ideas
+    attributes:
+      label: "Additional ideas"
+    validations:
+      required: false
+
